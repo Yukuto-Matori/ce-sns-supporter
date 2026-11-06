@@ -1,0 +1,11 @@
+# ツール環境設定ファイル
+# ドキュメント検索パス定義
+
+docs-search-path:
+  - ./ai_docs/
+  - ./docs/
+  - ./ce-shared-tools/ai_docs/
+
+projectname: ce-sns-supporter  # プロジェクト名
+projecttype: tool             # プロジェクトタイプ: tool / web / unity のいずれか
+

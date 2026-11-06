@@ -1,0 +1,60 @@
+# AIロール設定ファイル
+# ce-shared-tools の基底ロールを role-ext で拡張する
+
+base-role: ce-shared-tools/.ce-shared-tools/ai-roles.yaml
+
+roles:
+  # 同名拡張: 基底 dev_unity に Unity/Celib 固有分を追加
+  - role-ext: dev_unity
+    inline:
+      - instructions_build_test_digest.inline.md
+    references:
+      - Guideline_3dAssetMetadata.md
+      - Guideline_CeUnityEditorOperator.md
+      - Guideline_TestTimeBudget.md
+      - Guideline_KnownPitfalls.md
+      - Guideline_Unity6Cs9_UT_IT.md
+      - Guideline_Unity6Cs9Coding.md
+
+  # 同名拡張: 基底 coder_unity に Unity/Celib 固有分を追加
+  - role-ext: coder_unity
+    inline:
+      - instructions_unity_coding.inline.md
+    references:
+      - Guideline_CeUnityEditorOperator.md
+      - Guideline_TestTimeBudget.md
+      - Guideline_KnownPitfalls.md
+      - Guideline_Unity6Cs9_UT_IT.md
+      - Guideline_Unity6Cs9Coding.md
+
+  # 別名派生: coder_unity から派生して新しい役割名にする
+  # 夜間バッチ処理用（コメント改善、ドキュメント改善などの定型処理）
+  - role: coder_refactor_comment
+    role-ext: coder_unity
+    inline:
+      - instruction_refactor_cs_comment.inline.md
+
+  # 同名拡張: 基底 coordinator に Unity/Celib 固有分を追加
+  # 設計・タスク分解・依頼書の起票を担当し、実装は Worker セッションへ渡す
+  - role-ext: coordinator
+    inline:
+      - instructions_build_test_digest.inline.md
+    references:
+      - Guideline_CeUnityEditorOperator.md
+      - Guideline_TestTimeBudget.md
+      - Guideline_KnownPitfalls.md
+      - Guideline_Unity6Cs9_UT_IT.md
+      - Guideline_Unity6Cs9Coding.md
+
+  # 同名拡張: 基底 worker_brief に Unity/Celib 固有分を追加
+  # 依頼書 1 件を実行する実装セッション
+  - role-ext: worker_brief
+    inline:
+      - instructions_unity_coding.inline.md
+      - instructions_build_test_digest.inline.md
+    references:
+      - Guideline_CeUnityEditorOperator.md
+      - Guideline_TestTimeBudget.md
+      - Guideline_KnownPitfalls.md
+      - Guideline_Unity6Cs9_UT_IT.md
+      - Guideline_Unity6Cs9Coding.md

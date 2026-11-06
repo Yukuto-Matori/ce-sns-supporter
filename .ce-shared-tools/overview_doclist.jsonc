@@ -1,0 +1,10 @@
+// プロジェクト外から参照するためのドキュメントをマージするためのリスト
+{ "doclist" :
+  [
+    // === ce-sns-supporter ===
+    {"type":"rawtext", "path":"", "headeroffset":0, "text": "## Common Architecture Document List"},
+    {"type":"mdlinks", "path":"docs/arch/", "headeroffset":2},
+
+
+  ]
+}

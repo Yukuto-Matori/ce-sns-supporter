@@ -1,0 +1,59 @@
+{
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.gitmodules": true,
+        "**/*.booproj": true,
+        "**/*.pidb": true,
+        "**/*.suo": true,
+        "**/*.user": true,
+        "**/*.userprefs": true,
+        "**/*.unityproj": true,
+        "**/*.dll": true,
+        "**/*.exe": true,
+        "**/*.obj": true,
+        "**/*.OBJ": true,
+        "**/*.asset": true,
+        "**/*.cubemap": true,
+        "**/*.flare": true,
+        "**/*.mat": true,
+        "**/*.meta": true,
+        "**/*.prefab": false,
+        "**/*.unity": true,
+        "**/*.cspro*": true,
+        "build/": true,
+        "Build/": true,
+        "Library/": true,
+        "library/": true,
+        "obj/": true,
+        "Obj/": true,
+        "ProjectSettings/": true,
+        "temp/": true,
+        "Temp/": true
+    },
+    "files.associations": {
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "terminal.integrated.profiles.windows": {
+        "GitBash": {
+            "path": "bash.exe",
+            "icon": "terminal-bash",
+            "args": ["--norc","--noprofile"],
+            "env": {
+                "PS1": "\\[\\033[32m\\][\\W]\\[\\033[0m\\] $ "
+            }
+        },
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe"
+        }
+    },
+    "terminal.integrated.env.windows": {
+        "PROJECT_ROOT": "${workspaceFolder}",
+        "PATH": "${env:PATH};${workspaceFolder}/tools;${workspaceFolder}/ce-shared-tools/tools/bash;/C/Users/amaji/AppData/Local/agy/bin"
+    },
+    "editor.fontFamily": "'BIZ UDゴシック', Consolas, 'MS Gothic', monospace",
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
+}
